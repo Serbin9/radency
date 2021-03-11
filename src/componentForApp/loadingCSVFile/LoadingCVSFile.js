@@ -23,6 +23,7 @@ const LoadingCVSFile = ({setUsers, setError})=>{
     const  handleOnError = (err, file, inputElem, reason) => {
         console.log(err)
     }
+    console.log('------------>92');
 
     return(
         <CSVReader

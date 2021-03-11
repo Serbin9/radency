@@ -3,11 +3,11 @@ const structureObject = {
     ["phone"]:"",
     ["email"]:"",
     ["age"]:"",
-    ["Experience"]:"",
-    ["Yearly Income"]:"",
-    ["Has children"]:"",
-    ["License states"]:"",
-    ["Expiration date"]:"",
-    ["License number"]:""
+    ["experience"]:"",
+    ["yearly income"]:"",
+    ["has children"]:"",
+    ["license states"]:"",
+    ["expiration date"]:"",
+    ["license number"]:""
 }
 export default structureObject;

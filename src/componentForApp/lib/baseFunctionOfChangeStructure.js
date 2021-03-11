@@ -1,4 +1,4 @@
-import structureObject from "./structureObject"
+// import structureObject from "./structureObject"
 
 
 const createStructure =(data)=>{
@@ -10,6 +10,7 @@ const createStructure =(data)=>{
 }
 
 const validationStructure=(formStructure, structureObject)=>{
+    console.log("formStructure", formStructure, "structureObject=======>", structureObject);
     for(let key in formStructure){
         if(!Object.keys(structureObject).includes(key)){
             return false;
@@ -88,7 +89,7 @@ const repeatingSearch =(oldDate)=>{
 export {
     createStructure, 
     phoneValidation, 
-    structureObject, 
+    // structureObject, 
     validationStructure, 
     lengthDataValue, 
     validationFields,

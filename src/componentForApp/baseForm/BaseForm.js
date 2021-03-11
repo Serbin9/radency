@@ -2,6 +2,7 @@ import React from "react";
 import style from "./BaseForm.module.css"
 import Item from "../item/Item"
 const BaseForm=({users})=>{
+    console.log("users======>5", users);
     return(
        <table>
            <thead>

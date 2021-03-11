@@ -11,6 +11,7 @@ const Item =({element, index})=>{
         <div>
             <td>{index+1}</td>
             {element.duplicateLine !=="full name" && <tb>{element["full name"]}</tb>|| <td className={style.errorStyle}>{element["full mname"]}</td>}
+            {/* {element.duplicateLine !=="full name" && <tb>{element["full name"]}</tb>|| <td className={style.errorStyle}>{element["full mname"]}</td>} */}
 
         </div>
     )

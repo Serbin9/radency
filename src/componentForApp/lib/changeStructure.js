@@ -1,10 +1,11 @@
 import {createStructure, 
     phoneValidation, 
-    structureObject, 
+    // structureObject, 
     validationFields, 
     validationStructure, 
     lengthDataValue,
     repeatingSearch} from './baseFunctionOfChangeStructure';
+import structureObject from "../lib/structureObject"
 
 const changeStructure=(data, errorCallback, uploadCallback, ...args)=>{
     const users = [];
@@ -17,7 +18,7 @@ const changeStructure=(data, errorCallback, uploadCallback, ...args)=>{
         // return;
     }else{
         for(let i=1; i < lengthValue; i++){
-            const itemForm = Object.assign({}, formatStructure);
+            const itemForm = Object.assign({}, formStructure);
             let k = 0;
             for(let key in itemForm){
                 itemForm[key]= data[i].data[k].trim()
