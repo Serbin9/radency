@@ -1,0 +1,24 @@
+.MainPageConatainer{
+    margin: 100px 20px;
+    text-align: center;
+    max-height: 50vh;
+    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+.errorText{
+    font-size: 32px;
+}
+.errorContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 75%;
+    border-color: #a65c66;
+    height: 100px;
+    font-size: 30px;
+    background-color: #f4cccc;
+    border-style: solid;
+    border-width: 2px;
+
+}
