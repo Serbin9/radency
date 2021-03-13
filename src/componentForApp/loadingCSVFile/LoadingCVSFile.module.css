@@ -1,4 +1,6 @@
 .buttonImport{
+    font-family: "Ubuntu";
+    font-weight: 300;
     font-size: 26px;
     display: flex;
     justify-content: center;

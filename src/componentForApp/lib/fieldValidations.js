@@ -16,7 +16,7 @@ export const ageValidations =(age)=>{
 }
 
 export const experienceValidations = (expirience, age)=>{
-    return expirience >=0 && expirience < age
+    return Number(expirience) >=0 && Number(expirience) < Number(age)
 }
 export const licenseValidations = (license)=>{
     const corectLicense = /^[\w\dА-я]+$/;
@@ -26,7 +26,7 @@ export const licenseValidations = (license)=>{
 export const  yearlyIncomeValidations = (yearlyIncome)=>{
     // const YIValue = isFinite(yearlyIncome);
     if(isNaN(yearlyIncome)){
-        return {status:false , valueYI:"Неверный формат данных"}
+        return {status:false , valueYI:"Неверный формат данных"+ " " + yearlyIncome}
 
     }
     
@@ -73,51 +73,18 @@ export const licenseStatesValidation=(licenseStates)=>{
 
 
 export const expDayValidations =(expDay)=>{
-    console.log('expDay', expDay);
+    let date = moment(expDay, "YYYY-MM-DD" || "MM/DD/YYYY").isValid();
 
-    let dateForm1 = moment(expDay).format("YYYY-MM-DD");
-    // let date = new Date(expDay);
-    // let dateForm1 = moment(expDay).format("YYYY-MM-DD");
+    let dateFormat = moment(expDay).format("YYYY-MM-DD");
+    let dateNowFormat = moment().format("YYYY-MM-DD");
+    if(date){
+        if(dateFormat > dateNowFormat){
+            return{status:true, value:expDay}
 
-    let dateNowForm1 = moment().format("YYYY-MM-DD");
-    // console.log("date", date, "dateNowForm1", dateNowForm1)
-
-    let dateForm2 = moment(expDay).format("MM/DD/YYYY");
-
-    let dateNowForm2 = moment().format("MM/DD/YYYY");
-    console.log("dateForm2", dateForm2, "dateNowForm2", dateNowForm2)
-    
- 
-    // if(!dateForm1 || !dateForm2){
-    //     return{status:false, value:expDay}
-
-    // }
-    // // (dateForm1 >= dateNowForm1) ||
-    if(!dateForm2 || !dateForm1){
-        return{status:false, value:expDay}
-
+        }else{
+            return{status:false, value:expDay}
+        }
+      
     }
-
-
-    if(dateForm2 > dateNowForm2 && dateForm1 > dateNowForm1){
-        console.log("1");
-
-        return{status:true, value:expDay}
-    }
-    if(dateForm1 > dateNowForm1){
-        return{status:true, value:expDay}
-
-    }
-    if(dateForm1 < dateNowForm1 || dateForm2 < dateNowForm2){
-        console.log("2");
-        return{status:false, value:expDay}
-    }
-
-    if(!dateForm1 || !dateForm2){
-        return{status:false, value:expDay}
-  
-    }
-
-
 
 }

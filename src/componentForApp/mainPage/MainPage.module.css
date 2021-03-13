@@ -8,6 +8,8 @@
 }
 .errorText{
     font-size: 32px;
+    font-weight: 300;
+
 }
 .errorContainer{
     display: flex;
