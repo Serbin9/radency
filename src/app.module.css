@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+body > * {
+    font-size: 15px;
+    /* font-family: "Nano San"; */
+}
+
 .container{
     display: flex;
     flex-direction: column;

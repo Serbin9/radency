@@ -13,17 +13,15 @@ const LoadingCVSFile = ({setUsers, setError})=>{
         }
     }
     const handleOnDrop = (data) => {
-        console.log('---------------------------')
-        console.log("data", data, "setError", setError, "setUsers", setUsers);
+        setError(null);
+        // console.log("data", data, "setError", setError, "setUsers", setUsers);
         const isRequiredFields = ["full name", "phone", "email"];
         changeStructure(data, setError, setUsers, ...isRequiredFields)
-        console.log('---------------------------')
     }
     
     const  handleOnError = (err, file, inputElem, reason) => {
-        console.log(err)
+        setError(err)
     }
-    console.log('------------>92');
 
     return(
         <CSVReader
@@ -31,6 +29,10 @@ const LoadingCVSFile = ({setUsers, setError})=>{
         onDrop={handleOnDrop}
         onError={handleOnError}
         noDrag
+        style={{progressBar:{
+            backgroundColor:"white"
+        }}
+        }
 
         >
             {()=>(

@@ -8,6 +8,6 @@ const structureObject = {
     ["has children"]:"",
     ["license states"]:"",
     ["expiration date"]:"",
-    ["license number"]:""
+    ["license number"]:"",
 }
 export default structureObject;

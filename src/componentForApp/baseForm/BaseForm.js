@@ -2,9 +2,9 @@ import React from "react";
 import style from "./BaseForm.module.css"
 import Item from "../item/Item"
 const BaseForm=({users})=>{
-    console.log("users======>5", users);
+    // console.log("users======>5", users);
     return(
-       <table>
+       <table className={style.table}>
            <thead>
                <tr>
                    <th>ID</th>
@@ -18,6 +18,7 @@ const BaseForm=({users})=>{
                    <th>License states</th>
                    <th>Expiration date</th>
                    <th>License number</th>
+                   <th>Duplicate with</th>
                </tr>
            </thead>
            <tbody>

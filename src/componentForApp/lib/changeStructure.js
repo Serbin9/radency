@@ -12,7 +12,7 @@ const changeStructure=(data, errorCallback, uploadCallback, ...args)=>{
     const formStructure = createStructure(data);
     const formatStructure = validationStructure(formStructure, structureObject);
     const lengthValue = lengthDataValue(data);
-    console.log("formStructure", formStructure, "formatStructure", formatStructure, "lengthValue", lengthValue);
+    // console.log("formStructure", formStructure, "formatStructure", formatStructure, "lengthValue", lengthValue);
     if(!formatStructure){
         errorCallback("File format is not correct");
         // return;
@@ -33,7 +33,7 @@ const changeStructure=(data, errorCallback, uploadCallback, ...args)=>{
         }
     }
 
-    console.log('users====>', users);
+    // console.log('users====>', users);
 
 
     const afterCheckPhoneValidation = phoneValidation(users);

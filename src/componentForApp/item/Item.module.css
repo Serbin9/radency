@@ -1,3 +1,7 @@
 .errorStyle{
     background-color: #F4cccc;
 }
+td,th{
+    padding: 6px;
+    border: 2px solid #2a2a2a;
+}

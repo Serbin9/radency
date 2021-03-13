@@ -10,7 +10,7 @@ const createStructure =(data)=>{
 }
 
 const validationStructure=(formStructure, structureObject)=>{
-    console.log("formStructure", formStructure, "structureObject=======>", structureObject);
+    // console.log("formStructure", formStructure, "structureObject=======>", structureObject);
     for(let key in formStructure){
         if(!Object.keys(structureObject).includes(key)){
             return false;
